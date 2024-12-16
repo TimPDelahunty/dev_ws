@@ -1,0 +1,52 @@
+[0.008s] Invoking command in '/home/tim/dev_ws/build/my_bot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/tim/dev_ws/src/my_bot -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/tim/dev_ws/install/my_bot
+[0.123s] -- The C compiler identification is GNU 13.2.0
+[0.230s] -- The CXX compiler identification is GNU 13.2.0
+[0.252s] -- Detecting C compiler ABI info
+[0.370s] -- Detecting C compiler ABI info - done
+[0.382s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.383s] -- Detecting C compile features
+[0.384s] -- Detecting C compile features - done
+[0.397s] -- Detecting CXX compiler ABI info
+[0.519s] -- Detecting CXX compiler ABI info - done
+[0.526s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.526s] -- Detecting CXX compile features
+[0.527s] -- Detecting CXX compile features - done
+[0.532s] -- Found ament_cmake: 2.5.2 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.649s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.718s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.752s] -- Found ament_lint_auto: 0.17.1 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[0.849s] -- Added test 'copyright' to check source files copyright and LICENSE
+[0.850s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.850s] -- Configured 'flake8' exclude dirs and/or files: 
+[0.851s] -- Added test 'lint_cmake' to check CMake code style
+[0.851s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.852s] -- Added test 'xmllint' to check XML markup files
+[0.854s] -- Configuring done (0.8s)
+[0.855s] -- Generating done (0.0s)
+[0.856s] -- Build files have been written to: /home/tim/dev_ws/build/my_bot
+[0.860s] Invoked command in '/home/tim/dev_ws/build/my_bot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/tim/dev_ws/src/my_bot -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/tim/dev_ws/install/my_bot
+[0.860s] Invoking command in '/home/tim/dev_ws/build/my_bot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/tim/dev_ws/build/my_bot -- -j16 -l16
+[0.896s] Invoked command in '/home/tim/dev_ws/build/my_bot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/tim/dev_ws/build/my_bot -- -j16 -l16
+[0.897s] Invoking command in '/home/tim/dev_ws/build/my_bot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/tim/dev_ws/build/my_bot
+[0.908s] -- Install configuration: ""
+[0.909s] -- Execute custom install script
+[0.909s] -- Symlinking: /home/tim/dev_ws/install/my_bot/share/my_bot/config/empty.yaml
+[0.917s] -- Symlinking: /home/tim/dev_ws/install/my_bot/share/my_bot/description/robot.urdf.xacro
+[0.927s] -- Symlinking: /home/tim/dev_ws/install/my_bot/share/my_bot/launch/rsp.launch.py
+[0.938s] -- Symlinking: /home/tim/dev_ws/install/my_bot/share/my_bot/worlds/empty.world
+[0.948s] -- Symlinking: /home/tim/dev_ws/install/my_bot/share/ament_index/resource_index/package_run_dependencies/my_bot
+[0.959s] -- Symlinking: /home/tim/dev_ws/install/my_bot/share/ament_index/resource_index/parent_prefix_path/my_bot
+[0.970s] -- Symlinking: /home/tim/dev_ws/install/my_bot/share/my_bot/environment/ament_prefix_path.sh
+[0.982s] -- Symlinking: /home/tim/dev_ws/install/my_bot/share/my_bot/environment/ament_prefix_path.dsv
+[0.994s] -- Symlinking: /home/tim/dev_ws/install/my_bot/share/my_bot/environment/path.sh
+[1.005s] -- Symlinking: /home/tim/dev_ws/install/my_bot/share/my_bot/environment/path.dsv
+[1.017s] -- Symlinking: /home/tim/dev_ws/install/my_bot/share/my_bot/local_setup.bash
+[1.029s] -- Symlinking: /home/tim/dev_ws/install/my_bot/share/my_bot/local_setup.sh
+[1.041s] -- Symlinking: /home/tim/dev_ws/install/my_bot/share/my_bot/local_setup.zsh
+[1.053s] -- Symlinking: /home/tim/dev_ws/install/my_bot/share/my_bot/local_setup.dsv
+[1.062s] -- Symlinking: /home/tim/dev_ws/install/my_bot/share/my_bot/package.dsv
+[1.073s] -- Symlinking: /home/tim/dev_ws/install/my_bot/share/ament_index/resource_index/packages/my_bot
+[1.083s] -- Symlinking: /home/tim/dev_ws/install/my_bot/share/my_bot/cmake/my_botConfig.cmake
+[1.094s] -- Symlinking: /home/tim/dev_ws/install/my_bot/share/my_bot/cmake/my_botConfig-version.cmake
+[1.104s] -- Symlinking: /home/tim/dev_ws/install/my_bot/share/my_bot/package.xml
+[1.117s] Invoked command in '/home/tim/dev_ws/build/my_bot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/tim/dev_ws/build/my_bot
