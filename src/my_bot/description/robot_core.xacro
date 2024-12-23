@@ -10,8 +10,13 @@
 <!--Constants -->
 <xacro:property name="platform_radius" value="0.05"/>
 <xacro:property name="platform_length" value="0.04"/>
-<xacro:property name="tilt_platform_offset" value="0.07"/>
+<xacro:property name="tilt_platform_offset" value="0.125"/>
 <xacro:property name="pan_platform_offset" value="1.02"/>
+<xacro:property name="tilt_mount_pole_radius" value="0.01"/>
+<xacro:property name="tilt_mount_pole_offset" value="0.03"/>
+<xacro:property name="tilt_mount_pole_length" value="0.1"/>
+<xacro:property name="mount_pole_radius" value="0.03"/>
+
 
 
 <!--Material Defineitions-->
@@ -60,7 +65,7 @@
     <visual>
         <origin xyz = "0 0 0"/>
         <geometry>
-            <cylinder length="2" radius="${platform_radius}" />
+            <cylinder length="2" radius="${mount_pole_radius}" />
         </geometry>
         <material name="white"/>
     </visual>
@@ -68,12 +73,12 @@
     <collision>
         <origin xyz ="0 0 1"/>
         <geometry>
-            <cylinder length="2" radius="${platform_radius}" />
+            <cylinder length="2" radius="${mount_pole_radius}" />
         </geometry>
 
     </collision>
 
-    <xacro:inertial_cylinder mass = "0.1" length="2" radius="${platform_radius}">
+    <xacro:inertial_cylinder mass = "0.1" length="2" radius="${mount_pole_radius}">
         <origin xyz=" 0 0 -1" rpy="0 0 0"/>
     </xacro:inertial_cylinder>
 </link>
@@ -119,13 +124,45 @@
     <material>Gazebo/Blue</material>
 </gazebo>
 
+<!-- Tilt Mount Pole LINK -->
 
+    <joint name="tilt_mount_pole_joint" type="fixed">
+        <parent link="pan_platform"/>
+        <child link="tilt_mount_pole"/>
+        <origin xyz="0 0 ${tilt_mount_pole_offset}"/>
+    </joint>
+
+  <link name="tilt_mount_pole">
+    <visual>
+        <origin xyz = "0 0 ${tilt_mount_pole_offset}"/>
+        <geometry>
+            <cylinder length="${tilt_mount_pole_length}" radius="${tilt_mount_pole_radius}" />
+        </geometry>
+        <material name="white"/>
+    </visual>
+
+    <collision>
+        <origin xyz ="0 0 ${tilt_mount_pole_offset}"/>
+        <geometry>
+            <cylinder length="${tilt_mount_pole_length}" radius="${tilt_mount_pole_radius}" />
+        </geometry>
+
+    </collision>
+
+    <xacro:inertial_cylinder mass = "0.1" length="${tilt_mount_pole_length}" radius="${tilt_mount_pole_radius}">
+        <origin xyz=" 0 0 ${tilt_mount_pole_offset}" rpy="0 0 0"/>
+    </xacro:inertial_cylinder>
+</link>
+
+<gazebo reference="tilt_mount_pole">
+    <material>Gazebo/White</material>
+</gazebo>
 
 
 <!-- Servo Motor Tilt Platform (Bottom) -->
 
 <joint name="tilt_platform_joint" type="revolute">
-    <parent link="pan_platform"/>
+    <parent link="tilt_mount_pole"/>
     <child link="tilt_platform"/>
 
     <origin xyz="0 0 ${tilt_platform_offset}" rpy="-${pi/2} 0 0"/>

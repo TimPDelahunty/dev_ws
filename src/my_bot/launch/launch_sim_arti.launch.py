@@ -101,6 +101,22 @@ def generate_launch_description():
     )
 
 
+    # Add spawners for the pan and tilt platform controllers
+    pan_tilt_position_controller_spawner = Node(
+        package="controller_manager",
+        executable="spawner",
+        arguments=["forward_position_controller"],
+        output="screen",
+    )
+
+    joint_state_broadcaster_spawner = Node(
+        package="controller_manager",
+        executable="spawner",
+        arguments=["joint_state_broadcaster"],
+        output="screen",
+)
+
+
 
     # Code for delaying a node (I haven't tested how effective it is)
     # 
@@ -117,7 +133,16 @@ def generate_launch_description():
     # )
     #
     # Replace the diff_drive_spawner in the final return with delayed_diff_drive_spawner
-
+    """
+    teleop_node = Node(
+        package='teleop_twist_keyboard',
+        executable='teleop_twist_keyboard',
+        output='screen',
+        prefix='xterm -e',
+        remappings=[
+            ('/cmd_vel', '/pan_tilt_joint_controller/commands'),
+        ]
+    )"""
 
 
     # Launch them all!
@@ -131,5 +156,8 @@ def generate_launch_description():
         diff_drive_spawner,
         joint_broad_spawner,
         ros_gz_bridge,
-        ros_gz_image_bridge
+        ros_gz_image_bridge,
+        #teleop_node,
+        joint_state_broadcaster_spawner,  # Spawn the joint state broadcaster
+        pan_tilt_position_controller_spawner  # Spawn the forward position controller
     ])
