@@ -7,17 +7,16 @@ controller_manager:
 
     #controller for pan and tilt
     pan_tilt_joint_group_position_controller:
-      type: "position_controllers/JointGroupPositionController"
+      type: position_controllers/JointGroupPositionController
       joints:
         - pan_platform_joint
         - tilt_platform_joint
-      state_interfaces:
-        - position
-        - position
       command_interfaces:
         - position
+      state_interfaces:
         - position
-
+        - velocity
+        - effort
 
 
 

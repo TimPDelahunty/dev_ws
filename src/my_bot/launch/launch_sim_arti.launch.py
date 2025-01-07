@@ -99,23 +99,30 @@ def generate_launch_description():
         output="screen",
     )"""
     
+
     #pan tilt controller spawner
     pan_tilt_position_controller_spawner = Node(
         package="controller_manager",
         executable="spawner",
         arguments=["pan_tilt_joint_group_position_controller"], #arg needs to match the controllers yaml
-        output="screen",
+        
     )
 
-
-    
-
+#joint state broadcaster
     joint_state_broadcaster_spawner = Node(
         package="controller_manager",
         executable="spawner",
         arguments=["joint_state_broadcaster"], #arg needs to match the controllers yaml
-        output="screen",
-)
+        
+    )
+    
+
+
+
+
+    
+
+
 
     bridge_params = os.path.join(get_package_share_directory(package_name),'config','gz_bridge.yaml')
     ros_gz_bridge = Node(
