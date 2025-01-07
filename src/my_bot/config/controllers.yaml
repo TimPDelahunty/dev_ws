@@ -1,15 +1,50 @@
 controller_manager:
   ros__parameters:
-    update_rate: 10  # Hz
+    update_rate: 100  # Hz
 
     joint_state_broadcaster:
       type: joint_state_broadcaster/JointStateBroadcaster
 
+    #controller for pan and tilt
+    pan_tilt_joint_group_position_controller:
+      type: "position_controllers/JointGroupPositionController"
+      joints:
+        - pan_platform_joint
+        - tilt_platform_joint
+      state_interfaces:
+        - position
+        - position
+      command_interfaces:
+        - position
+        - position
 
-forward_position_controller:
-  ros__parameters:
-    type: forward_command_controller/ForwardCommandController
-    joints:
-      - pan_platform_joint
-      - tilt_platform_joint
-    interface_name: position #cmd_vel
+
+
+
+
+
+    #pan controller
+    #pan_platform_controller:
+   #   type: position_controllers/JointPositionController
+    #  joint: pan_platform_joint
+     # state_interfaces: ["position"]
+      #command_interfaces: ["position"]
+    #tilt controller
+    #tilt_platform_controller:
+    #  type: position_controllers/JointPositionController
+    #  joint: tilt_platform_joint
+    #  state_interfaces: ["position"]
+    #  command_interfaces: ["position"]
+
+
+#later on I will impletment a trajectory controller to do object tracking. for now just ge it working
+
+
+#below is not in launch file. once above is working. lets try see if can get below to work. add in brige command too
+#forward_position_controller:
+#  ros__parameters:
+#    type: forward_command_controller/ForwardCommandController
+#    joints:
+#      - pan_platform_joint
+#      - tilt_platform_joint
+#    interface_name: position #cmd_vel

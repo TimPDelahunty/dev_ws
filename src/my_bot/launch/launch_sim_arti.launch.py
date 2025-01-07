@@ -83,12 +83,32 @@ def generate_launch_description():
     )
 
     # Add spawners for the pan and tilt platform controllers
+    """
+    pan_position_controller_spawner = Node(
+        package="controller_manager",
+        executable="spawner",
+        arguments=["pan_platform_controller"], #arg needs to match the controllers yaml
+        output="screen",
+    )
+
+    # Add spawners for the pan and tilt platform controllers
+    tilt_position_controller_spawner = Node(
+        package="controller_manager",
+        executable="spawner",
+        arguments=["tilt_platform_controller"], #arg needs to match the controllers yaml
+        output="screen",
+    )"""
+    
+    #pan tilt controller spawner
     pan_tilt_position_controller_spawner = Node(
         package="controller_manager",
         executable="spawner",
-        arguments=["forward_position_controller"], #arg needs to match the controllers yaml
+        arguments=["pan_tilt_joint_group_position_controller"], #arg needs to match the controllers yaml
         output="screen",
     )
+
+
+    
 
     joint_state_broadcaster_spawner = Node(
         package="controller_manager",
@@ -153,9 +173,11 @@ def generate_launch_description():
         #diff_drive_spawner,
         #joint_broad_spawner,
         joint_state_broadcaster_spawner,  # Spawn the joint state broadcaster
-        pan_tilt_position_controller_spawner,  # Spawn the forward position controller
+        #tilt_position_controller_spawner, # Spawn the forward position controller tilt
+        #pan_position_controller_spawner,
+        pan_tilt_position_controller_spawner, # Spawn the group position controller
         ros_gz_bridge, # These must come last
-        ros_gz_image_bridge # THese must come last
+        ros_gz_image_bridge # These must come last
         #teleop_node,
 
     ])
