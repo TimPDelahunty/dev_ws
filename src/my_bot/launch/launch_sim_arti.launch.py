@@ -104,9 +104,13 @@ def generate_launch_description():
     pan_tilt_position_controller_spawner = Node(
         package="controller_manager",
         executable="spawner",
-        arguments=["pan_tilt_joint_group_position_controller"], #arg needs to match the controllers yaml
+        arguments=["pan_tilt_joint_trajectory_controller"], #arg needs to match the controllers yaml
         
     )
+
+
+
+
 
 #joint state broadcaster
     joint_state_broadcaster_spawner = Node(

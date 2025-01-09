@@ -2,30 +2,21 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
     <gazebo>
-        <plugin name="diff_drive" filename="libgazebo_ros_diff_drive.so">
+        <plugin name="gazebo_ros_joint_pose_trajectory"
+            filename="libgazebo_ros_joint_pose_trajectory.so">
 
-            <!-- Wheel Information -->
-            <left_joint>pan_platform_joint</left_joint>
-            <right_joint>tilt_platform_joint</right_joint>
-            <wheel_separation>0.297</wheel_separation>
-            <wheel_radius>0.033</wheel_radius>
+        <ros>
 
+            <!-- Add a namespace -->
+            <namespace>/my_namespace</namespace>
 
-            <!-- Limits -->
-            <!-- <max_wheel_torque>200</max_wheel_torque> -->
-            <max_linear_acceleration>0.33</max_linear_acceleration>
+            <!-- Remap the default topic -->
+            <remapping>set_joint_trajectory:=my_trajectory</remapping>
 
-            <!-- Input -->
-            <topic>cmd_vel</topic>
+        </ros>
 
-            
-            <!-- Output -->
-            <frame_id>odom</frame_id>
-            <child_frame_id>base_link</child_frame_id>
-            <odom_topic>odom</odom_topic>
-            <odom_publisher_frequency>30</odom_publisher_frequency>
-            
-            <tf_topic>/tf</tf_topic>
+        <!-- Update rate in Hz -->
+        <update_rate>2</update_rate>
 
         </plugin>
 
@@ -36,6 +27,6 @@
             <joint_name>pan_platform_joint</joint_name>
             <joint_name>tilt_platform_joint</joint_name>
         </plugin>
-    </gazebo>
+    </gazebo> 
 
 </robot>

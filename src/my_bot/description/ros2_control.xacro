@@ -4,41 +4,96 @@
    
 
 <!--can delete the Sim from line below to make like articulated-->
-    <ros2_control name="GazeboSystem" type="system">
+    <ros2_control name="GazeboSimSystem" type="system">
         <hardware>
             <plugin>gz_ros2_control/GazeboSimSystem</plugin>
         </hardware>
         <joint name="pan_platform_joint">
             <command_interface name="position" > <!--These command and state interface must match yaml-->
-                <param name="min">"0"</param>
+                <param name="min">0</param>
                 <param name="max">6.28</param>
             </command_interface>
             <state_interface name="position">
                 <param name="initial_value">0</param>
             </state_interface>
-            <state_interface name="velocity"/>
-            <state_interface name="effort"/>
         </joint>
 
         <joint name="tilt_platform_joint">
             <command_interface name="position">
-                <param name="min">"-0.78"</param>
+                <param name="min">-0.78</param>
                 <param name="max">1.57</param>
             </command_interface>
             <state_interface name="position">
                 <param name="initial_value">0</param>
             </state_interface>
-            <state_interface name="velocity"/>
-            <state_interface name="effort"/>
         </joint>
     </ros2_control>
 
-
+<!--Gazebo plugins-->
     <gazebo>
         <plugin name="gz_ros2_control::GazeboSimROS2ControlPlugin" filename="libgz_ros2_control-system.so"> 
             <parameters>$(find my_bot)/config/controllers.yaml</parameters>
             <parameters>$(find my_bot)/config/gaz_ros2_ctl_use_sim.yaml</parameters>
+             <controller_manager_prefix_node_name>controller_manager</controller_manager_prefix_node_name>
         </plugin>
+
+        <plugin filename="gz-sim-joint-state-publisher-system"
+            name="gz::sim::systems::JointStatePublisher">
+            <topic>joint_states</topic>
+            <!-- <joint_name>pan_platform_joint</joint_name>
+            <joint_name>tilt_platform_joint</joint_name> -->
+        </plugin>
+
+        <!-- <plugin
+        filename="gz-sim-joint-trajectory-controller-system"
+        name="gz::sim::systems::JointTrajectoryController">
+            <joint_name>pan_platform_joint</joint_name>
+            <initial_position>0</initial_position>
+            <position_p_gain>1</position_p_gain>
+            <position_i_gain>0.4</position_i_gain>
+            <position_d_gain>1.0</position_d_gain>
+            <position_i_min>-1</position_i_min>
+            <position_i_max>1</position_i_max>
+            <position_cmd_min>-20</position_cmd_min>
+            <position_cmd_max>20</position_cmd_max>
+            
+            <joint_name>tilt_platform_joint</joint_name>
+            <initial_position>0</initial_position>
+            <position_p_gain>1</position_p_gain>
+            <position_i_gain>0.2</position_i_gain>
+            <position_d_gain>0.5</position_d_gain>
+            <position_i_min>-1</position_i_min>
+            <position_i_max>1</position_i_max>
+            <position_cmd_min>-10</position_cmd_min>
+            <position_cmd_max>10</position_cmd_max>
+        </plugin> -->
+
+
+
+        <!-- <plugin
+            filename="gz-sim-joint-position-controller-system"
+            name="gz::sim::systems::JointPositionController">
+            <joint_name>pan_platform_joint</joint_name>
+            <topic>rotor_cmd</topic>
+            <p_gain>1</p_gain>
+            <i_gain>0.1</i_gain>
+            <d_gain>0.01</d_gain>
+            <i_max>1</i_max>
+            <i_min>-1</i_min>
+            <cmd_max>1000</cmd_max>
+            <cmd_min>-1000</cmd_min>
+
+            <joint_name>tilt_platform_joint</joint_name>
+            <topic>rotor_cmd</topic>
+            <p_gain>1</p_gain>
+            <i_gain>0.1</i_gain>
+            <d_gain>0.01</d_gain>
+            <i_max>1</i_max>
+            <i_min>-1</i_min>
+            <cmd_max>1000</cmd_max>
+            <cmd_min>-1000</cmd_min>
+
+        </plugin> -->
     </gazebo>
 
 
