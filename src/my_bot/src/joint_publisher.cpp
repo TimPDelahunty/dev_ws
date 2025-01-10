@@ -5,13 +5,6 @@
 #include <chrono>
 
 
-
-#include "rclcpp/rclcpp.hpp"
-#include "trajectory_msgs/msg/joint_trajectory.hpp"
-#include "trajectory_msgs/msg/joint_trajectory_point.hpp"
-#include <cmath>
-#include <chrono>
-
 using namespace std::chrono_literals;
 
 class JointPublisher : public rclcpp::Node
@@ -40,7 +33,7 @@ private:
 
         auto point = trajectory_msgs::msg::JointTrajectoryPoint();
         double position1 = 1.5 * (1 - cos(count_ * 0.1));
-        double position2 = -position1;
+        double position2 = position1 - 0.78;
         point.positions.push_back(position1);
         point.positions.push_back(position2);
         point.time_from_start = rclcpp::Duration::from_seconds(1.0);

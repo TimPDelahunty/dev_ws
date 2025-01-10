@@ -1,0 +1,42 @@
+[0.014s] Invoking command in '/home/tim/dev_ws/build/my_bot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/tim/dev_ws/build/my_bot -- -j16 -l16
+[0.121s] [ 50%] [32mBuilding CXX object CMakeFiles/joint_publisher.dir/src/joint_publisher.cpp.o[0m
+[6.275s] [100%] [32m[1mLinking CXX executable joint_publisher[0m
+[6.540s] [100%] Built target joint_publisher
+[6.562s] Invoked command in '/home/tim/dev_ws/build/my_bot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/tim/dev_ws/build/my_bot -- -j16 -l16
+[6.565s] Invoking command in '/home/tim/dev_ws/build/my_bot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/tim/dev_ws/build/my_bot
+[6.580s] -- Install configuration: ""
+[6.581s] -- Execute custom install script
+[6.581s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/lib/my_bot/joint_publisher
+[6.582s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/share/my_bot/config/controllers.yaml
+[6.582s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/share/my_bot/config/empty.yaml
+[6.582s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/share/my_bot/config/gaz_ros2_ctl_use_sim.yaml
+[6.582s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/share/my_bot/config/gz_bridge.yaml
+[6.583s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/share/my_bot/config/joint_trajectory_publisher.yaml
+[6.583s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/share/my_bot/description/camera.xacro
+[6.583s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/share/my_bot/description/gazebo_control.xacro
+[6.584s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/share/my_bot/description/inertial_macros.xacro
+[6.584s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/share/my_bot/description/robot.urdf
+[6.584s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/share/my_bot/description/robot.urdf.xacro
+[6.584s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/share/my_bot/description/robot_core.xacro
+[6.585s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/share/my_bot/description/ros2_control.xacro
+[6.585s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/share/my_bot/launch/launch_sim.launch.py
+[6.585s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/share/my_bot/launch/launch_sim_arti.launch.py
+[6.585s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/share/my_bot/launch/rsp.launch.py
+[6.586s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/share/my_bot/worlds/empty.world
+[6.586s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/share/my_bot/worlds/obstacles.world
+[6.586s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/share/ament_index/resource_index/package_run_dependencies/my_bot
+[6.587s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/share/ament_index/resource_index/parent_prefix_path/my_bot
+[6.587s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/share/my_bot/environment/ament_prefix_path.sh
+[6.587s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/share/my_bot/environment/ament_prefix_path.dsv
+[6.587s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/share/my_bot/environment/path.sh
+[6.587s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/share/my_bot/environment/path.dsv
+[6.587s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/share/my_bot/local_setup.bash
+[6.588s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/share/my_bot/local_setup.sh
+[6.588s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/share/my_bot/local_setup.zsh
+[6.588s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/share/my_bot/local_setup.dsv
+[6.588s] -- Symlinking: /home/tim/dev_ws/install/my_bot/share/my_bot/package.dsv
+[6.603s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/share/ament_index/resource_index/packages/my_bot
+[6.603s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/share/my_bot/cmake/my_botConfig.cmake
+[6.603s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/share/my_bot/cmake/my_botConfig-version.cmake
+[6.603s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/share/my_bot/package.xml
+[6.605s] Invoked command in '/home/tim/dev_ws/build/my_bot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/tim/dev_ws/build/my_bot
