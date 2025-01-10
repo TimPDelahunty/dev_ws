@@ -5,6 +5,10 @@ controller_manager:
     joint_state_broadcaster:
       type: joint_state_broadcaster/JointStateBroadcaster
 
+
+    pan_tilt_joint_trajectory_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
     #controller for pan and tilt
 
 pan_tilt_joint_trajectory_controller:

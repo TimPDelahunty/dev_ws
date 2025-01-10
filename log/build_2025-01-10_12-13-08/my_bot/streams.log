@@ -1,0 +1,21 @@
+[0.014s] Invoking command in '/home/tim/dev_ws/build/my_bot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/tim/dev_ws/build/my_bot -- -j16 -l16
+[0.074s] [ 50%] [32mBuilding CXX object CMakeFiles/joint_publisher.dir/src/joint_publisher.cpp.o[0m
+[1.552s] [01m[K/home/tim/dev_ws/src/my_bot/src/joint_publisher.cpp:45:5:[m[K [01;31m[Kerror: [m[K‘[01m[Krclcpp[m[K’ does not name a type
+[1.552s]    45 |     [01;31m[Krclcpp[m[K:TimerBase::SharedPtr timer_;
+[1.552s]       |     [01;31m[K^~~~~~[m[K
+[1.555s] [01m[K/home/tim/dev_ws/src/my_bot/src/joint_publisher.cpp:[m[K In constructor ‘[01m[KJointPublisher::[01;32m[KJointPublisher[m[K()[m[K’:
+[1.555s] [01m[K/home/tim/dev_ws/src/my_bot/src/joint_publisher.cpp:15:36:[m[K [01;31m[Kerror: [m[Kclass ‘[01m[KJointPublisher[m[K’ does not have any field named ‘[01m[Kcount_[m[K’
+[1.555s]    15 |         : Node("joint_publisher"), [01;31m[Kcount_[m[K(0)
+[1.555s]       |                                    [01;31m[K^~~~~~[m[K
+[1.560s] [01m[K/home/tim/dev_ws/src/my_bot/src/joint_publisher.cpp:20:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ktimer_[m[K’ was not declared in this scope; did you mean ‘[01m[Ktimer_t[m[K’?
+[1.560s]    20 |         [01;31m[Ktimer_[m[K = this->create_wall_timer(
+[1.560s]       |         [01;31m[K^~~~~~[m[K
+[1.560s]       |         [32m[Ktimer_t[m[K
+[1.570s] [01m[K/home/tim/dev_ws/src/my_bot/src/joint_publisher.cpp:[m[K In member function ‘[01m[Kvoid JointPublisher::[01;32m[Ktimer_callback[m[K()[m[K’:
+[1.570s] [01m[K/home/tim/dev_ws/src/my_bot/src/joint_publisher.cpp:33:39:[m[K [01;31m[Kerror: [m[K‘[01m[Kcount_[m[K’ was not declared in this scope
+[1.570s]    33 |         double position1 = 1.5*(1-cos([01;31m[Kcount_[m[K*0.1));
+[1.570s]       |                                       [01;31m[K^~~~~~[m[K
+[2.219s] gmake[2]: *** [CMakeFiles/joint_publisher.dir/build.make:76: CMakeFiles/joint_publisher.dir/src/joint_publisher.cpp.o] Error 1
+[2.219s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/joint_publisher.dir/all] Error 2
+[2.219s] gmake: *** [Makefile:146: all] Error 2
+[2.222s] Invoked command in '/home/tim/dev_ws/build/my_bot' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/tim/dev_ws/build/my_bot -- -j16 -l16

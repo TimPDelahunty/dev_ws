@@ -310,8 +310,8 @@ message(STATUS "Execute custom install script")
 
 # begin of custom install code
 
-# install(DIRECTORY "launch" "description" "config" "DESTINATION" "share/my_bot")
-ament_cmake_symlink_install_directory("/home/tim/dev_ws/src/my_bot" DIRECTORY "launch" "description" "config" "DESTINATION" "share/my_bot")
+# install("TARGETS" "joint_publisher" "DESTINATION" "lib/my_bot")
+include("/home/tim/dev_ws/build/my_bot/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
 # install(DIRECTORY "config" "description" "launch" "worlds" "DESTINATION" "share/my_bot")
 ament_cmake_symlink_install_directory("/home/tim/dev_ws/src/my_bot" DIRECTORY "config" "description" "launch" "worlds" "DESTINATION" "share/my_bot")

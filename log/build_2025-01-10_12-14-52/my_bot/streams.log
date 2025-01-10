@@ -1,0 +1,14 @@
+[0.010s] Invoking command in '/home/tim/dev_ws/build/my_bot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/tim/dev_ws/build/my_bot -- -j16 -l16
+[0.067s] [ 50%] [32mBuilding CXX object CMakeFiles/joint_publisher.dir/src/joint_publisher.cpp.o[0m
+[1.458s] [01m[K/home/tim/dev_ws/src/my_bot/src/joint_publisher.cpp:[m[K In constructor ‘[01m[KJointPublisher::[01;32m[KJointPublisher[m[K()[m[K’:
+[1.458s] [01m[K/home/tim/dev_ws/src/my_bot/src/joint_publisher.cpp:15:36:[m[K [01;31m[Kerror: [m[Kclass ‘[01m[KJointPublisher[m[K’ does not have any field named ‘[01m[Kcount_[m[K’
+[1.458s]    15 |         : Node("joint_publisher"), [01;31m[Kcount_[m[K(0)
+[1.458s]       |                                    [01;31m[K^~~~~~[m[K
+[1.469s] [01m[K/home/tim/dev_ws/src/my_bot/src/joint_publisher.cpp:[m[K In member function ‘[01m[Kvoid JointPublisher::[01;32m[Ktimer_callback[m[K()[m[K’:
+[1.469s] [01m[K/home/tim/dev_ws/src/my_bot/src/joint_publisher.cpp:33:39:[m[K [01;31m[Kerror: [m[K‘[01m[Kcount_[m[K’ was not declared in this scope
+[1.469s]    33 |         double position1 = 1.5*(1-cos([01;31m[Kcount_[m[K*0.1));
+[1.469s]       |                                       [01;31m[K^~~~~~[m[K
+[2.110s] gmake[2]: *** [CMakeFiles/joint_publisher.dir/build.make:76: CMakeFiles/joint_publisher.dir/src/joint_publisher.cpp.o] Error 1
+[2.110s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/joint_publisher.dir/all] Error 2
+[2.110s] gmake: *** [Makefile:146: all] Error 2
+[2.112s] Invoked command in '/home/tim/dev_ws/build/my_bot' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/tim/dev_ws/build/my_bot -- -j16 -l16

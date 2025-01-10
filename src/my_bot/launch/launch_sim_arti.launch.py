@@ -70,11 +70,11 @@ def generate_launch_description():
                         output='screen')
 
     
-    diff_drive_spawner = Node(
-        package="controller_manager",
-        executable="spawner",
-        arguments=["diff_cont"], #arg needs to match the controllers yaml
-    )
+    # diff_drive_spawner = Node(
+    #     package="controller_manager",
+    #     executable="spawner",
+    #     arguments=["diff_cont"], #arg needs to match the controllers yaml
+    # )
 
     joint_broad_spawner = Node(
         package="controller_manager",

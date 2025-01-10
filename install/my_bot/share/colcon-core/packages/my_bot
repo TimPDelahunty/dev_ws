@@ -1,1 +1,1 @@
-gazebo_ros:joint_state_publisher:robot_state_publisher:ros_gz_bridge:xacro
+controller_manager:gazebo_ros:gripper_controllers:gz_ros2_control:joint_state_publisher:python3-numpy:rclcpp:robot_state_publisher:ros2_control:ros2_controllers:ros_gz:ros_gz_bridge:ros_gz_image:ros_gz_sim:trajectory_msgs:xacro
