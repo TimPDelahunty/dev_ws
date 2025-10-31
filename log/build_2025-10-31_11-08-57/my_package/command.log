@@ -1,0 +1,4 @@
+Invoking command in '/home/tim/dev_ws/build/my_package': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/tim/dev_ws/build/my_package -- -j16 -l16
+Invoked command in '/home/tim/dev_ws/build/my_package' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/tim/dev_ws/build/my_package -- -j16 -l16
+Invoking command in '/home/tim/dev_ws/build/my_package': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/tim/dev_ws/build/my_package
+Invoked command in '/home/tim/dev_ws/build/my_package' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/tim/dev_ws/build/my_package

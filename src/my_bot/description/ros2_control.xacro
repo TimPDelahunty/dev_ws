@@ -31,10 +31,10 @@
 
 <!--Gazebo plugins-->
     <gazebo>
-        <plugin name="gz_ros2_control::GazeboSimROS2ControlPlugin" filename="libgz_ros2_control-system.so"> 
+        <plugin name="gz_ros2_control::GazeboSimROS2ControlPlugin" filename="gz_ros2_control-system"> 
             <parameters>$(find my_bot)/config/controllers.yaml</parameters>
             <parameters>$(find my_bot)/config/gaz_ros2_ctl_use_sim.yaml</parameters>
-             <controller_manager_prefix_node_name>controller_manager</controller_manager_prefix_node_name>
+            <controller_manager_prefix_node_name>controller_manager</controller_manager_prefix_node_name>
         </plugin>
 
         <plugin filename="gz-sim-joint-state-publisher-system"
@@ -70,30 +70,33 @@
 
 
 
-        <!-- <plugin
+        <plugin
             filename="gz-sim-joint-position-controller-system"
             name="gz::sim::systems::JointPositionController">
             <joint_name>pan_platform_joint</joint_name>
-            <topic>rotor_cmd</topic>
-            <p_gain>1</p_gain>
-            <i_gain>0.1</i_gain>
-            <d_gain>0.01</d_gain>
-            <i_max>1</i_max>
-            <i_min>-1</i_min>
-            <cmd_max>1000</cmd_max>
-            <cmd_min>-1000</cmd_min>
+            <topic>/model/tracker_robot/joint/pan_platform_joint/cmd_pos</topic>
+            <p_gain>1.0</p_gain>
+            <i_gain>0.01</i_gain>
+            <d_gain>0.05</d_gain>
+            <i_max>0.1</i_max>
+            <i_min>-0.1</i_min>
+            <cmd_max>10</cmd_max>
+            <cmd_min>-10</cmd_min>
+        </plugin>
 
+        <plugin
+            filename="gz-sim-joint-position-controller-system"
+            name="gz::sim::systems::JointPositionController">
             <joint_name>tilt_platform_joint</joint_name>
-            <topic>rotor_cmd</topic>
-            <p_gain>1</p_gain>
-            <i_gain>0.1</i_gain>
-            <d_gain>0.01</d_gain>
-            <i_max>1</i_max>
-            <i_min>-1</i_min>
-            <cmd_max>1000</cmd_max>
-            <cmd_min>-1000</cmd_min>
-
-        </plugin> -->
+            <topic>/model/tracker_robot/joint/tilt_platform_joint/cmd_pos</topic>
+            <p_gain>1.0</p_gain>
+            <i_gain>0.01</i_gain>
+            <d_gain>0.05</d_gain>
+            <i_max>0.1</i_max>
+            <i_min>-0.1</i_min>
+            <cmd_max>10</cmd_max>
+            <cmd_min>-10</cmd_min>
+        </plugin>
     </gazebo>
 
 

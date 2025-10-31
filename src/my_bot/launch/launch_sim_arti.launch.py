@@ -65,7 +65,7 @@ def generate_launch_description():
     # Run the spawner node from the ros_gz_sim package. The entity name doesn't really matter if you only have a single robot.
     spawn_entity = Node(package='ros_gz_sim', executable='create',
                         arguments=['-topic', 'robot_description',
-                                   '-name', 'my_bot',
+                                   '-name', 'tracker_robot', #must be same name in gz_bridge.yaml
                                    '-z', '0.1'],
                         output='screen')
 
@@ -75,12 +75,6 @@ def generate_launch_description():
     #     executable="spawner",
     #     arguments=["diff_cont"], #arg needs to match the controllers yaml
     # )
-
-    joint_broad_spawner = Node(
-        package="controller_manager",
-        executable="spawner",
-        arguments=["joint_state_broadcaster"], #arg needs to match the controllers yaml
-    )
 
     # Add spawners for the pan and tilt platform controllers
     """

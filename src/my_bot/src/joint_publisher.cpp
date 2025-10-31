@@ -27,22 +27,37 @@ private:
     void timer_callback()
     {
         auto message = trajectory_msgs::msg::JointTrajectory();
+        
+        // Set the header with current timestamp
+        message.header.stamp = this->now();
+        message.header.frame_id = "";
+        
         // Add names of the joints you want to control
         message.joint_names.push_back("pan_platform_joint");
         message.joint_names.push_back("tilt_platform_joint");
 
         auto point = trajectory_msgs::msg::JointTrajectoryPoint();
-        double position1 = 1.5 * (1 - cos(count_ * 0.1));
-        double position2 = position1 - 0.78;
-        point.positions.push_back(position1);
-        point.positions.push_back(position2);
-        point.time_from_start = rclcpp::Duration::from_seconds(1.0);
+        
+        // Create smoother motion within joint limits
+        double pan_position = 3.14 + 1.5 * sin(count_ * 0.05);  // Pan around center (3.14 rad)
+        double tilt_position = 0.5 * sin(count_ * 0.03);        // Tilt within safe range
+        
+        point.positions.push_back(pan_position);
+        point.positions.push_back(tilt_position);
+        
+        // Set velocities to zero for position control
+        point.velocities.push_back(0.0);
+        point.velocities.push_back(0.0);
+        
+        // Set time from start
+        point.time_from_start = rclcpp::Duration::from_seconds(0.5);
         message.points.push_back(point);
 
         // Publish the trajectory message
         publisher_->publish(message);
 
-        RCLCPP_INFO(this->get_logger(), "Publishing positions: '%f', '%f'", position1, position2);
+        RCLCPP_INFO(this->get_logger(), "Publishing positions: pan='%f' rad, tilt='%f' rad", 
+                    pan_position, tilt_position);
 
         count_ += 1; // Increment count_
     }

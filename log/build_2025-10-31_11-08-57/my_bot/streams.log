@@ -1,0 +1,20 @@
+[0.007s] Invoking command in '/home/tim/dev_ws/build/my_bot': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/tim/dev_ws/src/my_bot -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/tim/dev_ws/install/my_bot
+[0.020s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[2.343s] Traceback (most recent call last):
+[2.344s]   File "/opt/ros/jazzy/share/ament_cmake_core/cmake/package_templates/templates_2_cmake.py", line 21, in <module>
+[2.344s]     from ament_package.templates import get_environment_hook_template_path
+[2.344s] ModuleNotFoundError: No module named 'ament_package'
+[2.390s] [31mCMake Error at /opt/ros/jazzy/share/ament_cmake_core/cmake/ament_cmake_package_templates-extras.cmake:41 (message):
+[2.391s]   execute_process(/usr/bin/python3
+[2.391s]   /opt/ros/jazzy/share/ament_cmake_core/cmake/package_templates/templates_2_cmake.py
+[2.391s]   /home/tim/dev_ws/build/my_bot/ament_cmake_package_templates/templates.cmake)
+[2.391s]   returned error code 1
+[2.392s] Call Stack (most recent call first):
+[2.392s]   /opt/ros/jazzy/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake:41 (include)
+[2.392s]   /opt/ros/jazzy/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake:15 (find_package)
+[2.392s]   /opt/ros/jazzy/share/ament_cmake/cmake/ament_cmakeConfig.cmake:41 (include)
+[2.393s]   CMakeLists.txt:25 (find_package)
+[2.393s] 
+[2.393s] [0m
+[2.393s] -- Configuring incomplete, errors occurred!
+[2.396s] Invoked command in '/home/tim/dev_ws/build/my_bot' returned '1': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/tim/dev_ws/src/my_bot -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/tim/dev_ws/install/my_bot

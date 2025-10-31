@@ -1,0 +1,103 @@
+[0.009s] Invoking command in '/home/tim/dev_ws/build/my_bot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/tim/dev_ws/src/my_bot -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/tim/dev_ws/install/my_bot
+[0.030s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.200s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.212s] -- Found controller_manager: 4.32.0 (/opt/ros/jazzy/share/controller_manager/cmake)
+[0.244s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.252s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.262s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.274s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.331s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.333s] -- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.412s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.804s] -- Found gripper_controllers: 4.27.0 (/opt/ros/jazzy/share/gripper_controllers/cmake)
+[0.835s] -- Found eigen3_cmake_module: 0.3.0 (/opt/ros/jazzy/share/eigen3_cmake_module/cmake)
+[0.836s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[0.911s] -- Found gz_ros2_control: 1.2.13 (/opt/ros/jazzy/share/gz_ros2_control/cmake)
+[0.912s] -- Found ros_gz: 1.0.15 (/opt/ros/jazzy/share/ros_gz/cmake)
+[0.913s] -- Found ros_gz_bridge: 1.0.15 (/opt/ros/jazzy/share/ros_gz_bridge/cmake)
+[0.921s] -- Looking for gz-msgs10 -- found version 10.3.2
+[0.931s] -- Searching for dependencies of gz-msgs10
+[0.956s] -- Looking for gz-utils2 -- found version 2.2.1
+[0.956s] -- Searching for dependencies of gz-utils2
+[0.958s] -- Looking for gz-math7 -- found version 7.5.2
+[0.958s] -- Searching for dependencies of gz-math7
+[0.958s] -- Looking for gz-utils2 -- found version 2.2.1
+[0.968s] -- Checking for module 'tinyxml2'
+[0.996s] --   Found tinyxml2, version 10.0.0
+[1.060s] -- Looking for gz-transport13 -- found version 13.4.1
+[1.060s] -- Searching for dependencies of gz-transport13
+[1.094s] -- Config-file not installed for ZeroMQ -- checking for pkg-config
+[1.100s] -- Checking for module 'libzmq >= 4'
+[1.125s] --   Found libzmq, version 4.3.5
+[1.208s] -- Checking for module 'uuid'
+[1.241s] --   Found uuid, version 2.39.3
+[1.299s] -- Looking for gz-utils2 -- found version 2.2.1
+[1.300s] -- Searching for dependencies of gz-utils2
+[1.300s] -- Searching for <gz-utils2> component [cli]
+[1.301s] -- Looking for gz-utils2-cli -- found version 2.2.1
+[1.301s] -- Searching for dependencies of gz-utils2-cli
+[1.303s] -- Looking for gz-msgs10 -- found version 10.3.2
+[1.419s] -- Found ros_gz_image: 1.0.15 (/opt/ros/jazzy/share/ros_gz_image/cmake)
+[1.419s] -- Found ros_gz_sim: 1.0.15 (/opt/ros/jazzy/share/ros_gz_sim/cmake)
+[1.424s] -- Found ros2_control: 4.32.0 (/opt/ros/jazzy/share/ros2_control/cmake)
+[1.424s] -- Found ros2_controllers: 4.27.0 (/opt/ros/jazzy/share/ros2_controllers/cmake)
+[1.424s] -- Found xacro: 2.0.13 (/opt/ros/jazzy/share/xacro/cmake)
+[1.427s] -- Found ament_lint_auto: 0.17.2 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[1.500s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.501s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.501s] -- Configured cppcheck include dirs: 
+[1.501s] -- Configured cppcheck exclude dirs and/or files: 
+[1.502s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[1.503s] -- Configured cpplint exclude dirs and/or files: 
+[1.503s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.503s] -- Configured 'flake8' exclude dirs and/or files: 
+[1.503s] -- Added test 'lint_cmake' to check CMake code style
+[1.504s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.505s] -- Added test 'uncrustify' to check C / C++ code style
+[1.505s] -- Configured uncrustify additional arguments: 
+[1.505s] -- Added test 'xmllint' to check XML markup files
+[1.506s] -- Configuring done (1.5s)
+[1.530s] -- Generating done (0.0s)
+[1.533s] -- Build files have been written to: /home/tim/dev_ws/build/my_bot
+[1.543s] Invoked command in '/home/tim/dev_ws/build/my_bot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/tim/dev_ws/src/my_bot -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/tim/dev_ws/install/my_bot
+[1.544s] Invoking command in '/home/tim/dev_ws/build/my_bot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/tim/dev_ws/build/my_bot -- -j16 -l16
+[1.624s] [100%] Built target joint_publisher
+[1.637s] Invoked command in '/home/tim/dev_ws/build/my_bot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/tim/dev_ws/build/my_bot -- -j16 -l16
+[1.639s] Invoking command in '/home/tim/dev_ws/build/my_bot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/tim/dev_ws/build/my_bot
+[1.649s] -- Install configuration: ""
+[1.650s] -- Execute custom install script
+[1.650s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/lib/my_bot/joint_publisher
+[1.650s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/share/my_bot/config/controllers.yaml
+[1.650s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/share/my_bot/config/empty.yaml
+[1.650s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/share/my_bot/config/gaz_ros2_ctl_use_sim.yaml
+[1.650s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/share/my_bot/config/gz_bridge.yaml
+[1.650s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/share/my_bot/config/joint_trajectory_publisher.yaml
+[1.651s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/share/my_bot/description/camera.xacro
+[1.651s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/share/my_bot/description/gazebo_control.xacro
+[1.651s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/share/my_bot/description/inertial_macros.xacro
+[1.651s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/share/my_bot/description/robot.urdf
+[1.651s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/share/my_bot/description/robot.urdf.xacro
+[1.651s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/share/my_bot/description/robot_core.xacro
+[1.651s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/share/my_bot/description/ros2_control.xacro
+[1.651s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/share/my_bot/launch/launch_sim.launch.py
+[1.651s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/share/my_bot/launch/launch_sim_arti.launch.py
+[1.651s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/share/my_bot/launch/my_bot.launch.py
+[1.651s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/share/my_bot/launch/rsp.launch.py
+[1.651s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/share/my_bot/worlds/empty.world
+[1.652s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/share/my_bot/worlds/obstacles.world
+[1.652s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/share/ament_index/resource_index/package_run_dependencies/my_bot
+[1.652s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/share/ament_index/resource_index/parent_prefix_path/my_bot
+[1.652s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/share/my_bot/environment/ament_prefix_path.sh
+[1.652s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/share/my_bot/environment/ament_prefix_path.dsv
+[1.652s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/share/my_bot/environment/path.sh
+[1.652s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/share/my_bot/environment/path.dsv
+[1.652s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/share/my_bot/local_setup.bash
+[1.652s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/share/my_bot/local_setup.sh
+[1.652s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/share/my_bot/local_setup.zsh
+[1.652s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/share/my_bot/local_setup.dsv
+[1.652s] -- Symlinking: /home/tim/dev_ws/install/my_bot/share/my_bot/package.dsv
+[1.659s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/share/ament_index/resource_index/packages/my_bot
+[1.659s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/share/my_bot/cmake/my_botConfig.cmake
+[1.659s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/share/my_bot/cmake/my_botConfig-version.cmake
+[1.659s] -- Up-to-date symlink: /home/tim/dev_ws/install/my_bot/share/my_bot/package.xml
+[1.661s] Invoked command in '/home/tim/dev_ws/build/my_bot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/tim/dev_ws/build/my_bot
